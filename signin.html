@@ -17,8 +17,8 @@
           <h1>Create Account</h1>
           <a href="index.html" class="button">Bạn là khách hàng</a>
           <br />
-          <button>ban la quan ly</button>
-          <input type="text" placeholder="Name" />
+          <button id="managerButton">Bạn là quản lý</button>
+          <input type="text" id="nameInput" placeholder="Name" />
           <input type="email" placeholder="Email" />
           <input type="password" placeholder="Password" />
           <button>Sign Up</button>
@@ -49,22 +49,53 @@
       </div>
     </div>
     <script>
-      const signUpButton = document.getElementById("signUp");
-      const signInButton = document.getElementById("signIn");
-      const container = document.getElementById("container");
+        const signUpButton = document.getElementById("signUp");
+const signInButton = document.getElementById("signIn");
+const container = document.getElementById("container");
+const managerButton = document.getElementById("managerButton");
+const nameInput = document.getElementById("nameInput");
 
-      signUpButton.addEventListener("click", () => {
-        container.classList.add("right-panel-active");
-      });
+managerButton.addEventListener("click", () => {
+  nameInput.focus();
+});
 
-      signInButton.addEventListener("click", () => {
-        container.classList.remove("right-panel-active");
-      });
+const signUpForm = document.querySelector(".sign-up-container form");
+let isSignUpSuccess = false;
+signUpForm.addEventListener("submit", (event) => {
+  event.preventDefault();
+  // Kiểm tra các trường trong form
+  const emailInput = signUpForm.querySelector('input[type="email"]');
+  const passwordInput = signUpForm.querySelector('input[type="password"]');
+  const confirmPasswordInput = signUpForm.querySelector('input[name="confirm-password"]');
+  if (emailInput.value && passwordInput.value && confirmPasswordInput.value === passwordInput.value) {
+    isSignUpSuccess = true;
+    alert("Đăng ký thành công!");
+  } else {
+    alert("Vui lòng điền đầy đủ và đúng định dạng các trường!");
+  }
+});
 
-      signInButton.addEventListener("click", function (event) {
-        event.preventDefault();
-        window.location.href = "index.html";
-      });
-    </script>
+signUpButton.addEventListener("click", () => {
+  container.classList.add("right-panel-active");
+  isSignUpSuccess = false;
+});
+
+// Xử lý khi nhấn nút "Sign In"
+signInButton.addEventListener("click", () => {
+  container.classList.remove("right-panel-active");
+  if (isSignUpSuccess) {
+    isSignUpSuccess = false;
+  }
+});
+
+signInButton.addEventListener("click", function (event) {
+  event.preventDefault();
+  window.location.href = "index.html";
+});
+
+
+      </script>
+      
+      
   </body>
 </html>

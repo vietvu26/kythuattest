@@ -3,6 +3,13 @@ body {
   color: #000000;
   background-color: #ffffff;
 }
+.input-container label {
+  text-align: right; /* Căn mép trái của label */
+}
+
+.input-container input {
+  margin-left: auto; /* Đẩy các input về mép trái */
+}
 
 .layout_padding {
   padding: 75px 0;
@@ -315,7 +322,7 @@ a:focus {
 }
 
 .brand_img-box.item-1 {
-  background-image: url(../images/item-1.jpg);
+  background-image: url(../images/anhbeef.jpg);
 }
 
 .brand_img-box.item-2 {

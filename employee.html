@@ -14,7 +14,7 @@
     <meta name="description" content="" />
     <meta name="author" content="" />
 
-    <title>Watcher</title>
+    <title>Employee</title>
 
     <!-- slider stylesheet -->
     <link
@@ -72,7 +72,7 @@
                     <a class="nav-link" href="menu.html"> Menu </a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" href="watch.html"> Employee </a>
+                    <a class="nav-link" href="employee.html"> Employee </a>
                   </li>
                   <li class="nav-item">
                     <a class="nav-link" href="contact.html">Contact us</a>
@@ -98,60 +98,44 @@
 
       <section class="brand_section layout_padding2">
         <div class="container">
-          <div class="brand_heading">
-            <h3 class="custom_heading">Our watch brands</h3>
-            <p class="font-weight-bold">
-              It is a long established fact that a reader will be distracted by
-              the readable content of a page
-            </p>
-          </div>
-        </div>
-        <div class="container-fluid brand_item-container">
-          <div class="brand_item-box">
-            <div class="brand_img-box item-1">
-              <a href=""> View More </a>
+          <div class="input-container">
+            <div>
+              <label for="id">ID</label>
+              <input type="number" id="id" />
             </div>
-            <div class="brand_detail-box">
-              <h5>$<span> 40 </span></h5>
-              <h6 class="">best watch</h6>
+            <div>
+              <label for="name">Name</label>
+              <input type="text" id="name" />
             </div>
-          </div>
-          <div class="brand_item-box">
-            <div class="brand_img-box item-2">
-              <a href=""> View More </a>
+            <div>
+              <label for="position">Position</label>
+              <input type="text" id="position" />
             </div>
-            <div class="brand_detail-box">
-              <h5>$<span> 50 </span></h5>
-              <h6 class="">best watch</h6>
+            <div>
+              <label for="salary">Salary</label>
+              <input type="number" id="salary" />
             </div>
           </div>
-          <div class="brand_item-box">
-            <div class="brand_img-box item-3">
-              <a href=""> View More </a>
-            </div>
-            <div class="brand_detail-box">
-              <h5>$<span> 60 </span></h5>
-              <h6 class="">best watch</h6>
-            </div>
+
+          <div>
+            <input
+              class="btn btn-primary"
+              type="submit"
+              value="Submit"
+              onclick="add()"
+            />
           </div>
-          <div class="brand_item-box">
-            <div class="brand_img-box item-4">
-              <a href=""> View More </a>
-            </div>
-            <div class="brand_detail-box">
-              <h5>$<span> 70 </span></h5>
-              <h6 class="">best watch</h6>
-            </div>
-          </div>
-          <div class="brand_item-box">
-            <div class="brand_img-box item-5">
-              <a href=""> View More </a>
-            </div>
-            <div class="brand_detail-box">
-              <h5>$<span> 80 </span></h5>
-              <h6 class="">best watch</h6>
-            </div>
-          </div>
+          <table class="table table-dark table-hover" id="render">
+            <thead>
+              <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Position</th>
+                <th>Salary</th>
+                <th>Actions</th>
+              </tr>
+            </thead>
+          </table>
         </div>
       </section>
 
@@ -201,13 +185,113 @@
     <!-- footer section -->
     <section class="container-fluid footer_section">
       <p>
-        © 2020 All Rights Reserved By
+        trsang chu
         <a href="https://html.design/">Free Html Templates</a>
       </p>
     </section>
     <!-- footer section -->
 
-    <script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
-    <script type="text/javascript" src="js/bootstrap.js"></script>
+    <!-- <script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
+    <script type="text/javascript" src="js/bootstrap.js"></script> -->
+    <script>
+      var data = [
+        {
+          Id: 1,
+          Name: "John Doe",
+          Position: "Manager",
+          Salary: 5000,
+        },
+        {
+          Id: 2,
+          Name: "Jane Smith",
+          Position: "Developer",
+          Salary: 3000,
+        },
+        {
+          Id: 3,
+          Name: "Jack",
+          Position: "Developer",
+          Salary: 3000,
+        },
+        
+      ];
+
+      render();
+      function add() {
+        var item_id = document.getElementById("id").value;
+        var item_name = document.getElementById("name").value;
+        var item_position = document.getElementById("position").value;
+        var item_salary = document.getElementById("salary").value;
+        var item = {
+          Id: item_id,
+          Name: item_name,
+          Position: item_position,
+          Salary: item_salary,
+        };
+        let index = data.findIndex((c) => c.Id == item_id);
+        if (index >= 0) {
+          data.splice(index, 1, item);
+        } else {
+          data.push(item);
+        }
+
+        render();
+        clear();
+      }
+      function render() {
+        let table = `
+    <tr>
+      <th>ID</th>
+      <th>Name</th>
+      <th>Position</th>
+      <th>Salary</th>
+      <th>Actions</th>
+    </tr>
+  `;
+
+        for (let i = 0; i < data.length; i++) {
+          table += `
+      <tr>
+        <td>${data[i].Id}</td>
+        <td>${data[i].Name}</td>
+        <td>${data[i].Position}</td>
+        <td>${data[i].Salary}</td>
+        <td>
+          <button class="btn btn-primary" onclick="deleteItem(${data[i].Id})">Delete</button>
+          <button class="btn btn-primary"  onclick="editItem(${data[i].Id})">Edit</button>
+        </td>            
+      </tr>
+    `;
+        }
+
+        document.getElementById("render").innerHTML = table;
+      }
+
+      function clear() {
+        document.getElementById("id").value = "";
+        document.getElementById("name").value = "";
+        document.getElementById("position").value = "";
+        document.getElementById("salary").value = "";
+      }
+      function deleteItem(x) {
+        for (let i = 0; i < data.length; i++) {
+          if (data[i].Id.toString() === x.toString()) {
+            data.splice(i, 1);
+            render();
+            break;
+          }
+        }
+      }
+      function editItem(x) {
+        for (let i = 0; i < data.length; i++) {
+          if (data[i].Id.toString() === x.toString()) {
+            document.getElementById("id").value = data[i].Id;
+            document.getElementById("name").value = data[i].Name;
+            document.getElementById("position").value = data[i].Position;
+            document.getElementById("salary").value = data[i].Salary;
+          }
+        }
+      }
+    </script>
   </body>
 </html>

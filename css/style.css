@@ -3,6 +3,21 @@ body {
   color: #000000;
   background-color: #ffffff;
 }
+.brand_item-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* Tạo 4 cột với chiều rộng bằng nhau */
+  grid-gap: 10px; /* Khoảng cách giữa các ảnh */
+}
+
+.brand_item-container img {
+  width: 100%; /* Đảm bảo các ảnh chiếm toàn bộ chiều rộng của cột */
+}
+.brand_item-container img {
+  display: inline-block;
+  width: 25%; /* Đảm bảo các ảnh chiếm 1/4 chiều rộng của phần tử chứa */
+}
+
+
 .input-container label {
   text-align: right; /* Căn mép trái của label */
 }
@@ -159,7 +174,7 @@ a:focus {
 }
 
 .slider_img-box {
-  width: 85%;
+  width: 100%;
   margin: 0 auto;
 }
 
@@ -537,7 +552,7 @@ a:focus {
 .contact_section {
   color: #fff;
   background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.3)), to(rgba(0, 0, 0, 0.3))), url(../images/contact.jpg);
-  background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(../images/contact.jpg);
+  background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(../images/hang7.jpg);
   background-size: cover;
   background-repeat: no-repeat;
 }

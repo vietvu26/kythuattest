@@ -35,6 +35,7 @@
     <link href="css/style.css" rel="stylesheet" />
     <!-- responsive style -->
     <link href="css/responsive.css" rel="stylesheet" />
+    <link rel="stylesheet" href="css/mau.css">
   </head>
 
   <body class="sub_page">
@@ -97,14 +98,25 @@
     <!-- contact section -->
 
     <section class="contact_section layout_padding">
-      <div class="cart">
-        <i class="fas fa-times"><ion-icon name="close-outline"></ion-icon></i>
-        <div id="info-cart">
-          <h2>Giỏ hàng của bạn</h2>
-          <div id="cart-items"></div>
-          <p id="total-cost">Tổng cộng: <span id="total-price">0</span> $</p>
-        <button id="checkout-button">Thanh toán</button>  
-        </div>
+      <h2 class="custom_heading text-center">NOW CONTACT US</h2>
+      <div class="container mt-5 pt-5">
+        <form action="">
+          <div>
+            <input type="text" placeholder="NAME" />
+          </div>
+          <div>
+            <input type="email" placeholder="EMAIL" />
+          </div>
+          <div>
+            <input type="text" placeholder="PHONE NUMBER" />
+          </div>
+          <div>
+            <input type="text" class="message-box" placeholder="MESSAGE" />
+          </div>
+          <div class="d-flex justify-content-center mt-5 pt-5">
+            <button>SEND</button>
+          </div>
+        </form>
       </div>
     </section>
 
@@ -161,5 +173,6 @@
 
     <script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
     <script type="text/javascript" src="js/bootstrap.js"></script>
+   
   </body>
 </html>

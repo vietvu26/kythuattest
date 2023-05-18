@@ -14,7 +14,7 @@
     <meta name="description" content="" />
     <meta name="author" content="" />
 
-    <title>RESTAURENT</title>
+    <title>RESTAURANT</title>
 
     <!-- slider stylesheet -->
     <link
@@ -33,8 +33,10 @@
     />
     <!-- Custom styles for this template -->
     <link href="css/style.css" rel="stylesheet" />
+    <link rel="stylesheet" href="css/menu.css" />
     <!-- responsive style -->
     <link href="css/responsive.css" rel="stylesheet" />
+    <script src="js/menu.js"></script>
   </head>
 
   <body class="sub_page">
@@ -97,29 +99,101 @@
       <!-- menu section -->
       <section class="brand_section layout_padding2">
         <div class="container-fluid brand_item-container">
-          <div class="brand_item-box">
-            <div class="brand_img-box item-1">
-              <a href="">
-                <button class="add-to-cart" data-name="Sprite" data-price="20">
-                  Thêm vào giỏ hàng
-                </button>
-              </a>
-            </div>  
-            <div class="brand_detail-box">
-              <h5>$<span> 40 </span></h5>
-              <h6 class="">best watch</h6>
+          <div class="list">
+            <div class="item" data-key="1">
+              <div class="card">
+                <img
+                  src="images/an1.jpg"
+                  style="width: 100%"\
+                  class="image"
+                />
+                <p class="title">Thịt xông khói</p>
+                <p class="price">$19.99</p>
+                <p>Some text about the jeans..</p>
+                <p><button class="btn btn-primary shop-item-button">Add to Cart</button></p>
+              </div>
+              <div class="card">
+                <img
+                  src="images/an2.jpg"\
+                  class="image"
+                  style="width: 100%"
+                />
+                <p class="title">Bê tái lăn</p>
+                <p class="price">$18.99</p>
+                <p>Some text about the jeans..</p>
+                <p><button class="btn btn-primary shop-item-button">Add to Cart</button></p>
+              </div>
+              <div class="card">
+                <img
+                  src="images/an3.jpg"
+                 class="image"
+                  style="width: 100%"
+                />
+                <p class="title">Tôm hùm</p>
+                <p class="price">$29.99</p>
+                <p>Some text about the jeans..</p>
+                <p><button class="btn btn-primary shop-item-button">Add to Cart</button></p>
+              </div>
+              <div class="card">
+                <img
+                  src="images/an4.jpg"
+                  style="width: 100%"
+                  class="image"
+                />
+                <p class="title">Hàu đại dương</p>
+                <p class="price">$19.99</p>
+                <p>Some text about the jeans..</p>
+                <p><button class="btn btn-primary shop-item-button">Add to Cart</button></p>
+              </div>
             </div>
           </div>
-          <div class="brand_item-box">
-            <div class="brand_img-box item-2">
-              <a href="contact.html" class="add-to-cart" data-name="Sườn xào" data-price="25"> Them vao gio hang </a>
+          <div class="item" data-key="1">
+            <div class="card">
+              <img
+                src="images/an6.jfif"
+                style="width: 100%"\
+                class="image"
+              />
+              <p class="title">Tôm chiên</p>
+              <p class="price">$9.99</p>
+              <p>Some text about the jeans..</p>
+              <p><button class="btn btn-primary shop-item-button">Add to Cart</button></p>
             </div>
-            <div class="brand_detail-box">
-              <h5 class="price">$<span> 50 </span></h5>
-              <h6 class="food-name">best watch</h6>
+            <div class="card">
+              <img
+                src="images/an9.jfif"\
+                class="image"
+                style="width: 100%"
+              />
+              <p class="title">Đậu phụ tứ xuyên</p>
+              <p class="price">$17.99</p>
+              <p>Some text about the jeans..</p>
+              <p><button class="btn btn-primary shop-item-button">Add to Cart</button></p>
+            </div>
+            <div class="card">
+              <img
+                src="images/an8.jfif"
+               class="image"
+                style="width: 100%"
+              />
+              <p class="title">Nộm tôm</p>
+              <p class="price">$8.99</p>
+              <p>Some text about the jeans..</p>
+              <p><button class="btn btn-primary shop-item-button">Add to Cart</button></p>
+            </div>
+            <div class="card">
+              <img
+                src="images/an10.jfif"
+                style="width: 100%"
+                class="image"
+              />
+              <p class="title">Tôm sốt bơ</p>
+              <p class="price">$5.99</p>
+              <p>Some text about the jeans..</p>
+              <p><button class="btn btn-primary shop-item-button">Add to Cart</button></p>
             </div>
           </div>
-         
+          
         </div>
       </section>
 
@@ -127,41 +201,21 @@
     </div>
 
     <!-- info section -->
-    <section class="info_section layout_padding">
-      <div class="container">
-        <div class="info_items">
-          <a href="">
-            <div class="item">
-              <div class="img-box box-1">
-                <img src="" alt="" />
-              </div>
-              <div class="detail-box">
-                <p>Lorem Ipsum is simply dummy text</p>
-              </div>
-            </div>
-          </a>
-          <a href="">
-            <div class="item">
-              <div class="img-box box-2">
-                <img src="" alt="" />
-              </div>
-              <div class="detail-box">
-                <p>+02 1234567890</p>
-              </div>
-            </div>
-          </a>
-          <a href="">
-            <div class="item">
-              <div class="img-box box-3">
-                <img src="" alt="" />
-              </div>
-              <div class="detail-box">
-                <p>demo@gmail.com</p>
-              </div>
-            </div>
-          </a>
-        </div>
+    <section class="container content-section">
+      <h2 class="section-header"></h2>
+      <div class="cart-row">
+        <span class="cart-item cart-column">ITEM</span>
+        <span class="cart-price cart-column">PRICE</span>
+        <span class="cart-quantity cart-column">QUANTITY</span>
       </div>
+      <div class="cart-items"></div>
+      <div class="cart-total">
+        <strong class="cart-total-title">Total:</strong>
+        <span class="cart-total-price">$0</span>
+      </div>
+      <button class="btn btn-primary btn-purchase" type="button">
+        PAYMENT
+      </button>
     </section>
 
     <!-- end info_section -->
@@ -175,10 +229,73 @@
     </section>
     <!-- footer section -->
     <script src="javatest.js"></script>
-    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
-    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
 
     <script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
     <script type="text/javascript" src="js/bootstrap.js"></script>
+    <script>
+      let products = [
+        {
+          name: "Bun",
+          tag: "bun",
+          price: 20,
+          inCart: 0,
+        },
+        {
+          name: "Pho",
+          tag: "pho",
+          price: 30,
+          inCart: 0,
+        },
+        {
+          name: "Com",
+          tag: "com",
+          price: 10,
+          inCart: 0,
+        },
+      ];
+
+      let carts = document.querySelectorAll(".add-cart");
+      for (let i = 0; i < carts.length; i++) {
+        carts[i].addEventListener("click", () => {
+          cartNumbers(products[i]);
+        });
+      }
+      function onLoadCartNumber() {
+        let productNumbers = localStorage.getItem("cartNumbers");
+        if (productNumbers) {
+          document.querySelector(".cart span").textContent = productNumbers;
+        }
+      }
+      function cartNumbers(product) {
+        let productNumbers = localStorage.getItem("cartNumbers");
+        productNumbers = parseInt(productNumbers);
+        if (productNumbers) {
+          localStorage.setItem("cartNumbers", productNumbers + 1);
+          document.querySelector(".cart span").textContent = productNumbers + 1;
+        } else {
+          localStorage.setItem("cartNumbers", 1);
+          document.querySelector(".cart span").textContent = 1;
+        }
+        setItems(product);
+      }
+      function setItems(product) {
+        console.log("inside");
+        console.log("my product", product);
+        // product.inCart = 1
+        // let cartItems = {
+        //   [product.tag] : product
+        // }
+        // localStorage.setItem("productsInCart", JSON.stringify(cartItems));
+      }
+      onLoadCartNumber();
+    </script>
   </body>
 </html>

@@ -1,0 +1,95 @@
+.card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    max-width: 250px;
+    margin: auto;
+    text-align: center;
+    font-family: arial;
+    flex: 1;
+  margin-right: 20px; 
+  }
+  .list {
+    display: flex;
+  }
+  
+  .item {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .price {
+    color: grey;
+    font-size: 22px;
+  }
+  
+  .card button {
+    border: none;
+    outline: 0;
+    padding: 12px;
+    color: white;
+    background-color: #000;
+    text-align: center;
+    cursor: pointer;
+    width: 100%;
+    font-size: 18px;
+  }
+  
+  .card button:hover {
+    opacity: 0.7;
+  }
+  .content-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .cart-row {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-bottom: 10px;
+  }
+  
+  .cart-column {
+    flex: 1;
+    text-align: center;
+  }
+  
+  .cart-items {
+    width: 100%;
+  }
+  
+  .cart-total {
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+    margin-top: 10px;
+  }
+  
+  .cart-total-title {
+    font-weight: bold;
+    margin-right: 5px;
+  }
+  
+  .btn-purchase {
+    margin-top: 10px;
+  }
+  .cart-total{
+    margin-right: 150px;
+  }
+  .cart-item {
+    display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  
+  }
+  .cart-item-title {
+    margin-top: 40px;
+    margin-left: 10px;
+  }
+  .cart-price {
+    margin-top: 40px;
+  }
+  .cart-quantity {
+    margin-top: 40px;
+  }
